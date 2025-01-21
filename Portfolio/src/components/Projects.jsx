@@ -7,37 +7,37 @@ const Projects = () => {
         {
             title: 'Weather App',
             description: 'A real-time weather application providing city-specific weather updates.',
-            imageUrl: 'src/assets/WeatherApp.png',
+            imageUrl: '/assets/WeatherApp.png', // Update path
             link: 'https://amankumar9958.github.io/weatherApp',
         },
         {
             title: 'QR Generator',
             description: 'Generates QR codes for text or links quickly and easily.',
-            imageUrl: 'src/assets/QRGenerator.png',
+            imageUrl: '/assets/QRGenerator.png', // Update path
             link: 'https://amankumar9958.github.io/QRGenerator/'
         },
         {
             title: 'Pixel Paint',
             description: 'A Chrome extension for selecting colors and enhancing creativity.',
-            imageUrl: 'src/assets/PixelPaint.png',
+            imageUrl: '/assets/PixelPaint.png', // Update path
             link: 'https://amankumar9958.github.io/PixelPaint'
         },
         {
             title: 'Text to Speech Converter',
             description: 'Converts any input text into clear, audible speech using modern browser-based text-to-speech APIs',
-            imageUrl: 'src/assets/TextToSpeech.png',
+            imageUrl: '/assets/TextToSpeech.png', // Update path
             link: 'https://amankumar9958.github.io/textToSpeech/'
         },
         {
             title: 'Link Saver',
             description: 'A simple and efficient tool to save and organize important links, ensuring easy access and better productivity.',
-            imageUrl: 'src/assets/LinkSaver.png',
+            imageUrl: '/assets/LinkSaver.png', // Update path
             link: 'https://amankumar9958.github.io/linkSaver/'
         },
         {
             title: 'Palindrome Checker',
             description: 'A lightweight executable application to check whether a given word or phrase is a palindrome, ensuring accuracy and speed.',
-            imageUrl: 'src/assets/PalindromeChecker.png',
+            imageUrl: '/assets/PalindromeChecker.png', // Update path
             link: 'https://github.com/AmanKumar9958/PalindromeChecker/releases/tag/v0.1'
         }
     ]
