@@ -13,7 +13,7 @@ const Card = ({ title, description, imageUrl, link, reference }) => {
         >
             <div className="overflow-hidden rounded-t-lg">
                 <img
-                    className="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105"
+                    className="w-full h-48 object-contain transform transition-transform duration-300 hover:scale-105"
                     src={imageUrl}
                     alt={title}
                 />
