@@ -6,8 +6,8 @@ const Home = () => {
         <div className='w-full min-h-screen bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'>
             {/* Hero Section */}
             <section className=' bg-gray-200 dark:bg-gray-900 flex flex-col items-center justify-center h-screen bg-cover bg-center' style={{ backgroundImage: 'url(/path/to/your/background-image.jpg)' }}>
-                <h1 className='text-5xl font-bold mb-4'>Hi, I'm Aman Kumar 👋</h1>
-                <p className='text-xl mb-8'>Full Stack Developer | Tech Enthusiast</p>
+                <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center'>Hi, I'm Aman Kumar <span className='wave'>👋</span></h1>
+                <p className='text-lg sm:text-xl mb-8 text-center'>Full Stack Developer | Tech Enthusiast</p>
                 <a href='#about' className='px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all font-semibold text-lg'>Learn More</a>
             </section>
 
