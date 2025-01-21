@@ -45,7 +45,7 @@ const Navbar = () => {
                 </button>
             </nav>
             {isMobileMenuOpen && (
-                <div ref={menuRef} className="md:hidden w-1/3 m-auto mt-4 rounded-3xl flex flex-col gap-4 items-center p-4 bg-gray-300 text-gray-800 fixed top-32 left-2/4 right-0 z-50 pl-5 pr-5 dark:bg-gray-600 dark:text-gray-900">
+                <div ref={menuRef} className="md:hidden w-1/3 m-auto mt-4 rounded-2xl flex flex-col gap-4 items-center p-2 bg-gray-300 text-gray-800 fixed top-32 left-2/4 right-0 z-50 pl-2 pr-2 dark:bg-gray-600 dark:text-gray-900">
                     <NavLink to='/' className={({ isActive }) => isActive ? 'p-2 bg-slate-100 rounded-full cursor-pointer text-lg links font-bold text-slate-900' : 'cursor-pointer text-lg font-bold hover:text-gray-500 dark:text-gray-300 transition-all'}>Home</NavLink>
                     <NavLink to='/projects' className={({ isActive }) => isActive ? 'p-2 bg-slate-100 rounded-full cursor-pointer text-lg links font-bold text-slate-900' : 'cursor-pointer text-lg font-bold hover:text-gray-500 dark:text-gray-300 transition-all'}>Projects</NavLink>
                     <NavLink to='/contact' className={({ isActive }) => isActive ? 'p-2 bg-slate-100 rounded-full cursor-pointer text-lg links font-bold text-slate-900' : 'cursor-pointer text-lg font-bold hover:text-gray-500 dark:text-gray-300 transition-all'}>Contact</NavLink>
