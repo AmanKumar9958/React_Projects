@@ -1,0 +1,3 @@
+Navigation bar change
+Remove animation from the project page.
+Hover effect on Projects

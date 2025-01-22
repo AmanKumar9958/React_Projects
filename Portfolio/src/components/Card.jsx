@@ -1,14 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
-const Card = ({ title, description, imageUrl, link, reference }) => {
+const Card = ({ title, description, imageUrl, link }) => {
     return (
-        <motion.div
-            drag
-            dragConstraints={reference}
-            dragTransition={{ power: 1.8, timeConstant: 100, modifyTarget: (target) => target * 3 }}
-            transition={{ duration: 0.1 }}
-            whileDrag={{scale: 0.5}}
+        <div
             className="max-w-sm rounded-lg overflow-hidden shadow-lg m-4 transform transition-transform duration-300 bg-white"
         >
             <div className="overflow-hidden rounded-t-lg">
@@ -30,7 +24,7 @@ const Card = ({ title, description, imageUrl, link, reference }) => {
                     Link
                 </a>
             </div>
-        </motion.div>
+        </div>
     );
 };
 
