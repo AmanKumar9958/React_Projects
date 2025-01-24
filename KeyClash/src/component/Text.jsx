@@ -1,13 +1,9 @@
 import React from 'react'
 
-const Text = () => {
-    const wordsList = [
-        "example", "coding", "typing", "speed", "keyboard", 
-        "javascript", "react", "project", "clone", "practice"
-    ]
+const Text = ({words}) => {
     return (
-        <div>
-            <p>{wordsList.join(' ')}</p>
+        <div className="bg-gray-700 p-4 rounded mb-4">
+            <p className="text-white text-lg">{words.join(" ")}</p>
         </div>
     )
 }
