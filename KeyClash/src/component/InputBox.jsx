@@ -38,23 +38,34 @@ const InputBox = ({ timeLeft, words, onComplete, startTimer }) => {
   const handleKeyDown = (e) => {
     if (e.key === " ") {
       e.preventDefault(); // Prevent default space behavior
-
-      const trimmedInput = userInput.trim(); // Remove extra spaces
-      const currentWord = words[currentWordIndex]; // Current word to compare
-
+  
+      const trimmedInput = userInput.trim();
+      const currentWord = words[currentWordIndex];
+  
       if (trimmedInput.length > 0) {
-        // Calculate correct and incorrect characters
         const { correctChars, incorrectChars } = calculateCharacterCounts(
           trimmedInput,
           currentWord
         );
-
-        // Update state
+  
         setCorrectCharacters((prev) => prev + correctChars);
         setIncorrectCharacters((prev) => prev + incorrectChars);
       }
-
-      // Move to the next word
+  
+      const isLastWord = currentWordIndex + 1 >= words.length;
+      const finalCounts = trimmedInput.length > 0
+        ? calculateCharacterCounts(trimmedInput, currentWord)
+        : { correctChars: 0, incorrectChars: 0 };
+  
+      if (isLastWord || timeLeft === 0) {
+        const totalChars = words.reduce((sum, word) => sum + word.length, 0);
+        onComplete(
+          correctCharacters + finalCounts.correctChars,
+          incorrectCharacters + finalCounts.incorrectChars,
+          totalChars
+        );
+      }
+  
       setCurrentWordIndex((prev) => prev + 1);
       setUserInput("");
 
