@@ -1,0 +1,10 @@
+Before Shuffling the words:
+    1. Speed is not showing.
+    2. Correct/Incorrect problem.
+
+
+
+After shuffling the words:
+    1. Speed show correct.
+    2. Incorrect/Contact works good.
+

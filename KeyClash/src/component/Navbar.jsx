@@ -4,10 +4,10 @@ import { faKeyboard } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
     return (
-        <div className="w-4/5 h-16  text-white flex items-center justify-center m-auto rounded-2xl bg-gray-800">
-        <div className="flex items-center gap-5 justify-center">
-            <FontAwesomeIcon icon={faKeyboard} className="text-4xl" />
-            <h2 className="text-4xl">KeyClash</h2>
+        <div className="w-full h-16 text-white flex items-center justify-center bg-gray-800 shadow-lg">
+        <div className="flex items-center gap-4">
+            <FontAwesomeIcon icon={faKeyboard} className="text-4xl text-blue-400" />
+            <h2 className="text-4xl font-bold text-blue-400">KeyClash</h2>
         </div>
         </div>
     );

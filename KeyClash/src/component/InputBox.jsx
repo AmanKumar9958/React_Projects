@@ -38,25 +38,25 @@ const InputBox = ({ timeLeft, words, onComplete, startTimer }) => {
   const handleKeyDown = (e) => {
     if (e.key === " ") {
       e.preventDefault(); // Prevent default space behavior
-  
+
       const trimmedInput = userInput.trim();
       const currentWord = words[currentWordIndex];
-  
+
       if (trimmedInput.length > 0) {
         const { correctChars, incorrectChars } = calculateCharacterCounts(
           trimmedInput,
           currentWord
         );
-  
+
         setCorrectCharacters((prev) => prev + correctChars);
         setIncorrectCharacters((prev) => prev + incorrectChars);
       }
-  
+
       const isLastWord = currentWordIndex + 1 >= words.length;
       const finalCounts = trimmedInput.length > 0
         ? calculateCharacterCounts(trimmedInput, currentWord)
         : { correctChars: 0, incorrectChars: 0 };
-  
+
       if (isLastWord || timeLeft === 0) {
         const totalChars = words.reduce((sum, word) => sum + word.length, 0);
         onComplete(
@@ -65,31 +65,32 @@ const InputBox = ({ timeLeft, words, onComplete, startTimer }) => {
           totalChars
         );
       }
-  
+
       setCurrentWordIndex((prev) => prev + 1);
       setUserInput("");
-
-      // If all words are typed or time is up, call onComplete
-      if (currentWordIndex + 1 >= words.length || timeLeft === 0) {
-        const totalChars = words.reduce((sum, word) => sum + word.length, 0); // Total characters in the word list
-        const finalCorrect = correctCharacters + (trimmedInput.length > 0 ? calculateCharacterCounts(trimmedInput, currentWord).correctChars : 0);
-        const finalIncorrect = incorrectCharacters + (trimmedInput.length > 0 ? calculateCharacterCounts(trimmedInput, currentWord).incorrectChars : 0);
-
-        onComplete(finalCorrect, finalIncorrect, totalChars);
-      }
     }
   };
 
   return (
-    <div>
-      <div className="text-lg mb-4">{words.join(" ")}</div>
+    <div className="w-full">
+      <div className="text-xl mb-6 text-gray-300 font-mono">
+        {words.map((word, index) => (
+          <span
+            key={index}
+            className={index === currentWordIndex ? "text-blue-400" : "text-gray-300"}
+          >
+            {word}{" "}
+          </span>
+        ))}
+      </div>
       <input
         type="text"
         value={userInput}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
         disabled={timeLeft === 0}
-        className="p-2 w-full bg-gray-700 text-white border border-gray-500 rounded"
+        className="p-3 w-full bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:border-blue-400 transition-colors text-lg"
+        placeholder="Start typing here..."
       />
     </div>
   );
